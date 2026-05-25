@@ -1,4 +1,4 @@
-# 🚀 FlexStart Landing Page
+# responsive-company-website
 
 A modern, fully responsive **business landing page** built using **HTML5, CSS3, Bootstrap 5, and Vanilla JavaScript**.
 
