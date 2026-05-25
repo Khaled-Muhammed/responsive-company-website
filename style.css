@@ -1,0 +1,294 @@
+:root {
+  --primary-color: #14b8a6;      /* teal */
+  --secondary-color: #6366f1;    /* indigo */
+  --heading-color: #0f172a;      /* dark slate */
+  --text-color: #334155;         /* gray */
+  --bg-soft: #f1f5f9;            /* light background */
+  --accent-color: #f59e0b;       /* amber */
+
+  --heading-font: "Nunito", sans-serif;
+}
+
+/* ================= GLOBAL ================= */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--heading-font);
+  color: var(--heading-color);
+  font-weight: 700;
+}
+
+body {
+  color: var(--text-color);
+}
+
+/* ================= NAVBAR ================= */
+.nav-item a {
+  color: var(--text-color);
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav-item a:hover {
+  color: var(--primary-color);
+}
+
+nav ul li:first-of-type a {
+  color: var(--primary-color);
+}
+
+.nav-item {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.navbar-brand {
+  font-size: 1.7rem;
+  color: var(--heading-color);
+  font-weight: 600;
+}
+
+header {
+  z-index: 9999;
+  background-color: white;
+  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* ================= HERO ================= */
+section.hero {
+  background-image: url("img/hero-bg.png");
+  min-height: 95vh;
+  cursor: default !important;
+}
+
+.hero-img {
+  width: 100%;
+  position: relative;
+  animation: upDown 3s infinite ease-in-out;
+}
+
+.hero .hero-buttons button {
+  padding: 12px 40px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+}
+
+/* animation */
+@keyframes upDown {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+.hero h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* ================= ABOUT / INTRO ================= */
+.about-img {
+  width: 100%;
+}
+
+.intro-info {
+  background-color: var(--bg-soft);
+  padding: 50px;
+}
+
+/* ================= VALUES ================= */
+.value-card img {
+  width: 100%;
+  transition: 0.5s;
+}
+
+section.values .card {
+  border: none;
+  text-align: center;
+  box-shadow: 0px 0 10px rgba(0, 0, 0, 0.1);
+  min-height: 470px;
+}
+
+.value-card:hover img {
+  scale: 0.9;
+}
+
+/* ================= STATS ================= */
+.stat-card {
+  box-shadow: 0px 0 10px rgba(0, 0, 0, 0.1);
+  min-height: 155px;
+}
+
+.stat-card i {
+  font-size: 2.5rem;
+}
+
+.stat-card.clients i:first-of-type {
+  color: var(--primary-color);
+}
+
+.stat-card.projects i:first-of-type {
+  color: var(--secondary-color);
+}
+
+.stat-card.hours i:first-of-type {
+  color: var(--accent-color);
+}
+
+.stat-card.workers i:first-of-type {
+  color: #ef4444;
+}
+
+section.stats {
+  min-height: 400px;
+}
+
+.section-title {
+  color: var(--primary-color);
+  background-color: color-mix(in srgb, var(--heading-color), transparent 90%);
+  font-size: 0.95rem;
+  padding: 8px 20px;
+  font-weight: 600;
+  width: fit-content;
+  margin: auto;
+  border-radius: 50px;
+}
+
+/* ================= FEATURES ================= */
+.features-pic {
+  width: 100%;
+}
+
+.feature-item {
+  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+  padding: 17px 20px;
+  font-size: 0.9rem;
+}
+
+.feature-item:hover i {
+  color: white;
+  background-color: var(--primary-color);
+}
+
+.feature-item h5 {
+  font-size: 1.15rem;
+  color: var(--heading-color);
+}
+
+.feature-item i {
+  background: color-mix(in srgb, var(--primary-color), transparent 92%);
+  color: var(--primary-color);
+  font-size: 24px;
+  border-radius: 3px;
+  padding: 0px 4px;
+  transition: 0.3s;
+}
+
+/* ================= ALT FEATURES ================= */
+.alt-features-pic {
+  width: 100%;
+}
+
+.icon-box {
+  text-align: center;
+}
+
+.icon-box i:first-of-type {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+}
+
+/* ================= SERVICES ================= */
+.service-card {
+  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+  padding: 60px 30px;
+  text-align: center;
+  border-radius: 5px;
+  transition: 0.4s;
+}
+
+.service-card > i:first-of-type {
+  font-size: 36px;
+  padding: 20px 40px;
+  border-radius: 4px;
+  display: inline-block;
+  transition: 0.4s;
+}
+
+.service-card:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.service-card:hover a,
+.service-card:hover p,
+.service-card:hover h3 {
+  color: white;
+}
+
+.service-card:hover > i:first-of-type {
+  background-color: white;
+}
+
+/* ================= PRICING ================= */
+.pricing-item {
+  min-height: 565px;
+  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+  padding: 40px 20px;
+  border-radius: 4px;
+  transition: 0.4s;
+}
+
+.pricing-item:hover {
+  scale: 1.05;
+}
+
+/* ================= FAQ ================= */
+.accordion-item {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #eee;
+}
+
+.accordion-button {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.accordion-item:hover .accordion-header button {
+  color: var(--primary-color) !important;
+}
+
+/* ================= PORTFOLIO ================= */
+.filters li {
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.filters li:hover,
+.filters li.active {
+  color: var(--primary-color);
+}
+
+/* ================= TESTIMONIALS ================= */
+.testimonial-card {
+  background-color: white;
+  box-shadow: 0px 0 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin: 40px 30px;
+  min-height: 320px;
+  text-align: center;
+}
+
+.testimonial-card .stars i {
+  color: #facc15;
+}
+
+/* ================= DARK MODE BUTTON ================= */
+#dark-mode-toggle {
+  background: transparent;
+  border: none;
+}
